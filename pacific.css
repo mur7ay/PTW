@@ -63,6 +63,7 @@ nav ul {
 
 nav a {
   text-decoration: none;
+  transition: color 3s ease-out;
 }
 
 nav a:link {
@@ -95,15 +96,6 @@ h3 {
 
 main ul {
   list-style-image: url(marker.gif);
-}
-
-footer {
-  font-size: 75%;
-  text-align: center;
-  font-family: sans-serif;
-  padding: 20px;
-  margin-left: 190px;
-  background-color: #fff;
 }
 
 dt {
@@ -141,6 +133,108 @@ dt {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-image: url(trailhero.jpg);
+}
+
+table {
+  border-width: 1px;
+  border-color: #3399CC;
+  border-style: solid;
+  width: 80%;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 5px;
+  border-width: 1px;
+  border-color: #3399CC;
+  border-style: solid;
+}
+
+td {
+  text-align: center;
+}
+
+.text {
+  text-align: left;
+}
+
+tr:nth-of-type(odd) {
+  background-color: #f5fafc;
+}
+
+label {
+  float: left;
+  display: block;
+  text-align: right;
+  width: 120px;
+  padding-right: 15px;
+}
+
+input, textarea {
+  display: block;
+  margin-bottom: 20px;
+}
+
+button {
+  margin-left: 130px;
+}
+
+video, embed {
+  float: right;
+  padding-left: 20px;
+}
+
+#gallery {
+  height: 200px;
+  text-align: left;
+  position: relative;
+}
+
+#gallery ul {
+  width: 300px;
+  list-style: none;
+}
+
+#gallery li {
+  display: inline;
+  float: left;
+  padding: 10px;
+}
+
+#gallery img {
+  border: none;
+}
+
+#gallery span {
+  position: absolute;
+  left: -1000px;
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+}
+
+#gallery a:hover span {
+  position: absolute;
+  top: 16px;
+  left: 320px;
+  text-align: center;
+  opacity: 1;
+}
+
+figure {
+  position: absolute;
+  text-align: center;
+  left: 280px;
+  opacity: .25;
+}
+
+footer {
+  clear: both;
+  font-size: 75%;
+  text-align: center;
+  font-family: sans-serif;
+  padding: 20px;
+  margin-left: 190px;
+  background-color: #fff;
 }
 
 @media only screen and (max-width: 64em) {
@@ -206,6 +300,16 @@ dt {
     display: inline;
   }
   #desktop {
+    display: none;
+  }
+  label {
+    float: none;
+    text-align: left;
+  }
+  button {
+    margin-left: 0px;
+  }
+  #gallery {
     display: none;
   }
 }
